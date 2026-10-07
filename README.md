@@ -3,7 +3,7 @@
 - Họ và tên: Thân Thị Kim Chi
 - MSSV / mã học viên: 2A202602797
 - Lớp: Track 1
-- Ngành đã chọn: Tuyển dụng & Quản trị Nhân sự (HR Tech & Talent Acquisition)
+- Ngành đã chọn: HR / tuyển dụng
 
 ---
 
