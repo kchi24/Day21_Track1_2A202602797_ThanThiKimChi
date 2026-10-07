@@ -12,9 +12,9 @@
 | Nội dung | Đánh giá của tôi và lý do |
 | --- | --- |
 | Những tác hại chính có thể xảy ra | **Bất bình đẳng và tước đoạt cơ hội việc làm/sinh kế có hệ thống.**<br>Ứng viên bị tước mất cơ hội nghề nghiệp mà không được giải trình minh bạch; củng cố các định kiến xã hội đối với phụ nữ, người da màu, người lớn tuổi và người khuyết tật. Về phía doanh nghiệp, việc phân loại sai khiến họ bỏ lỡ nhân tài và đối mặt với rủi ro pháp lý/kiện tụng nghiêm trọng. |
-| Mức độ high-stakes | **Cao (High-Stakes Category theo Phân loại của EU AI Act).**<br>Việc làm và thu nhập quyết định trực tiếp tới sinh kế, an sinh xã hội và phẩm giá con người. Một quyết định tự động loại hồ sơ ở quy mô lớn có thể loại trừ vĩnh viễn một nhóm người khỏi thị trường lao động mà họ không có quyền khiếu nại. |
-| Dữ liệu nhạy cảm có thể được sử dụng | **Dữ liệu nhân thân & thuộc tính được bảo vệ (Protected Attributes):**<br>- Thông tin cá nhân (PII): Họ tên, địa chỉ, tuổi tác, giới tính, trường học.<br>- Dữ liệu sinh trắc học & phi ngôn ngữ: Video phỏng vấn ghi nhận biểu cảm cơ mặt (micro-expressions), cao độ giọng nói, ngữ điệu.<br>- Dữ liệu sức khỏe/khuyết tật: Lịch sử y tế, tình trạng khuyết tật thần kinh/vận động. *(Bài làm không sử dụng dữ liệu thật của cá nhân).* |
-| Nhu cầu human review | **Cao (Bắt buộc phải có Human-in-the-loop ở khâu quyết định cuối cùng).**<br>Chuyên viên tuyển dụng (HR Recruiter) phải kiểm tra danh sách ứng viên trước khi gửi thư từ chối; AI chỉ được đóng vai trò hỗ trợ gợi ý (decision-support). Cần kiểm toán định kỳ tỷ lệ ứng viên bị loại theo nhóm nhân khẩu học để phát hiện thiên kiến kịp thời. |
+| Mức độ high-stakes | **Cao** *(Đánh giá định tính phục vụ bài tập, không dùng như kết luận pháp lý)*.<br>**Căn cứ:** Quyết định việc làm ảnh hưởng trực tiếp đến thu nhập, sinh kế gia đình, an sinh xã hội và sự phát triển sự nghiệp cá nhân. Một quyết định tự động loại hồ sơ ở quy mô lớn có thể tước bỏ cơ hội tiếp cận thị trường lao động mà ứng viên không hề có kênh phản hồi hay khiếu nại. |
+| Dữ liệu nhạy cảm có thể được sử dụng | **Dữ liệu nhân thân & các thuộc tính được bảo vệ (Protected Attributes):**<br>- Thông tin định danh cá nhân (PII): Họ tên, địa chỉ, tuổi tác, giới tính, trường học.<br>- Dữ liệu sinh trắc học & phi ngôn ngữ: Video phỏng vấn ghi nhận biểu cảm cơ mặt (micro-expressions), cử chỉ mắt, cao độ và âm sắc giọng nói.<br>- Dữ liệu sức khỏe/khuyết tật: Tiền sử bệnh án, tình trạng khuyết tật thần kinh/vận động. *(Bài tập chỉ nêu phân loại dữ liệu, không sử dụng dữ liệu thật của cá nhân).* |
+| Nhu cầu human review | **Cao** *(Đánh giá định tính phục vụ bài tập, không dùng như kết luận pháp lý)*.<br>**Căn cứ:** Chuyên viên nhân sự (HR Recruiter) bắt buộc phải kiểm tra và phê duyệt danh sách trước khi gửi quyết định từ chối ứng viên. AI chỉ nên đóng vai trò hỗ trợ gợi ý (decision-support). Cần có người giám sát định kỳ tỷ lệ từ chối theo các nhóm nhân khẩu học để kịp thời phát hiện lỗi thiên lệch thuật toán. |
 
 ---
 
@@ -22,16 +22,16 @@
 
 #### Brief Case
 - Tổ chức / sản phẩm AI: Amazon / Công cụ máy học tự động sàng lọc và xếp hạng hồ sơ ứng viên (Automated Applicant Screening Tool).
-- Thời gian, địa điểm / bối cảnh: Giai đoạn 2014 – 2017 tại Amazon (Mỹ và Anh); được Reuters phanh phui và chính thức giải tán vào năm 2018.
-- AI được dùng để làm gì: Tự động chấm điểm CV của ứng viên trên thang từ 1 đến 5 sao nhằm chọn ra top 5 ứng viên tiềm năng nhất cho các vị trí kỹ sư phần mềm.
-- Vấn đề hoặc sự kiện đáng chú ý: Thuật toán tự học từ dữ liệu tuyển dụng 10 năm trước của ngành công nghệ (vốn do nam giới áp đảo), từ đó tự hình thành quy tắc phạt điểm các CV có chứa từ *"women's"* (như *"women's chess club"*) và hạ điểm sinh viên tốt nghiệp các trường nữ sinh.
+- Thời gian, địa điểm / bối cảnh: Giai đoạn 2014 – 2017 tại Amazon (văn phòng kỹ thuật Edinburgh, Scotland); thông tin được Reuters công bố và dự án chính thức bị giải tán vào năm 2018.
+- AI được dùng để làm gì: Tự động chấm điểm CV của ứng viên trên thang điểm từ 1 đến 5 sao nhằm chọn ra top 5 ứng viên tiềm năng nhất cho các vị trí kỹ sư phần mềm.
+- Vấn đề hoặc sự kiện đáng chú ý: Thuật toán tự học từ dữ liệu tuyển dụng 10 năm trước của ngành công nghệ (vốn do nam giới áp đảo), từ đó tự hình thành quy tắc phạt điểm các CV có chứa từ *"women's"* (ví dụ: *"women's chess club captain"*) và hạ điểm sinh viên tốt nghiệp các trường nữ sinh.
 - Số liệu có nguồn:
-  - Sử dụng dữ liệu huấn luyện gồm hồ sơ tuyển dụng nộp vào Amazon trong **10 năm** (2004–2014).
-  - Đội ngũ kỹ sư đã thử nghiệm khoảng **500 mô hình máy học** trên hàng ngàn vị trí công việc.
-  - Amazon đã chính thức **giải tán nhóm dự án vào đầu năm 2018** sau khi nhận thấy không thể loại bỏ triệt để thiên kiến giới tính trong thuật toán.
-- Nguồn: Bài báo điều tra độc quyền: *"Amazon scraps secret AI recruiting tool that showed bias against women"* — Tác giả: Jeffrey Dastin — Đơn vị: Reuters — Ngày công bố: 10/10/2018 — URL: https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G
+  - **10 năm dữ liệu CV:** Tập dữ liệu huấn luyện gồm hồ sơ tuyển dụng nộp vào Amazon trong giai đoạn 2004–2014, theo điều tra của Reuters (2018).
+  - **Khoảng 500 mô hình máy học:** Số lượng mô hình được nhóm kỹ thuật Amazon huấn luyện để quét qua khoảng 50.000 cụm từ khóa trên hồ sơ ứng viên cũ, theo Reuters (2018).
+  - **01 dự án bị hủy bỏ:** Dự án chính thức bị lãnh đạo Amazon quyết định giải tán vào đầu năm 2018 sau khi xác nhận không thể loại bỏ triệt để thiên kiến giới tính, theo Reuters (2018).
+- Nguồn: Bài báo điều tra độc quyền: *"Amazon scraps secret AI recruiting tool that showed bias against women"* — Tác giả: Jeffrey Dastin — Đơn vị: Hãng thông tấn Reuters — Ngày công bố: 10/10/2018 — URL: https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G
 - Phân biệt bằng chứng và nhận định:
-  - *Điều nguồn xác nhận (Bằng chứng):* Amazon đã phát triển công cụ này từ năm 2014, mô hình tự động phạt điểm hồ sơ có từ khóa của nữ giới, và dự án đã bị hủy bỏ vì lo ngại phân biệt đối xử.
+  - *Điều nguồn xác nhận (Bằng chứng):* Amazon đã phát triển công cụ này từ năm 2014, mô hình tự động phạt điểm hồ sơ có từ khóa của nữ giới, và dự án đã bị hủy bỏ vì lo ngại phân biệt đối xử (xác nhận bởi các cựu nhân viên nội bộ Amazon).
   - *Điều tôi suy luận (Nhận định):* Dù Amazon tuyên bố công cụ chưa từng được dùng độc lập để ra quyết định tuyển dụng chính thức, việc thử nghiệm nội bộ có thể đã tạo ra sự thiên vị vô thức cho các chuyên viên nhân sự tiếp cận kết quả chấm điểm.
 
 #### Harm Map Worksheet
@@ -59,14 +59,14 @@
 - AI được dùng để làm gì: Phân tích biểu cảm cơ mặt (micro-expressions), cao độ giọng nói, ngữ điệu và từ vựng của ứng viên qua webcam khi trả lời câu hỏi tự động, từ đó xuất ra điểm số "khả năng làm việc" (employability score).
 - Vấn đề hoặc sự kiện đáng chú ý: Hệ thống bị giới khoa học và tổ chức nhân quyền chỉ trích là "ngụy khoa học" (pseudoscience). Thuật toán phân biệt đối xử với ứng viên có biểu cảm khuôn mặt khác biệt, người mắc chứng tự kỷ, người bị liệt mặt, hoặc người nói tiếng Anh không mang giọng chuẩn bản xứ.
 - Số liệu có nguồn:
-  - Hơn **1 triệu cuộc phỏng vấn AI** được thực hiện trên toàn cầu mỗi năm.
-  - Tháng 11/2019, Tổ chức EPIC đã nộp đơn khiếu nại chính thức dài **34 trang** lên FTC cáo buộc vi phạm Mục 5 Đạo luật FTC (hành vi thương mại gian lận và không công bằng).
-  - Đầu năm 2021, sau cuộc kiểm toán thuật toán độc lập của công ty tư vấn ORCAA, HireVue đã chính thức **loại bỏ hoàn toàn tính năng phân tích khuôn mặt (facial analysis)** khỏi sản phẩm.
+  - **Hơn 1.000.000 cuộc phỏng vấn video:** Số lượt phỏng vấn ứng viên được thực hiện bởi hệ thống AI của HireVue mỗi năm trên toàn cầu, áp dụng tại hơn 700 tập đoàn khách hàng, theo Washington Post (2021).
+  - **01 đơn khiếu nại dài 34 trang:** Văn bản khiếu nại chính thức của Tổ chức EPIC nộp lên Ủy ban Thương mại Liên bang Mỹ (FTC) vào tháng 11/2019 về hành vi thương mại gian lận và thiếu căn cứ khoa học, theo EPIC (2019).
+  - **100% tính năng phân tích biểu cảm mặt bị loại bỏ:** HireVue tuyên bố xóa bỏ hoàn toàn tính năng phân tích khuôn mặt khỏi sản phẩm vào đầu năm 2021 sau kết quả kiểm toán thuật toán độc lập của ORCAA, theo Washington Post & HireVue (2021).
 - Nguồn:
   - Đơn khiếu nại pháp lý: *EPIC Complaint to the Federal Trade Commission in the Matter of HireVue, Inc.* — Đơn vị: Electronic Privacy Information Center (EPIC) — Ngày nộp: 06/11/2019 — URL: https://epic.org/documents/in-the-matter-of-hirevue-inc/
   - Báo cáo kiểm toán: *"A popular algorithm used to screen job applicants was tested for bias. The results weren’t pretty"* — Tác giả: Drew Harwell — Báo: The Washington Post — Ngày: 25/02/2021 — URL: https://www.washingtonpost.com/technology/2021/02/25/hirevue-facial-analysis-screening/
 - Phân biệt bằng chứng và nhận định:
-  - *Điều nguồn xác nhận (Bằng chứng):* EPIC đã gửi đơn khiếu nại chính thức lên FTC; HireVue đã công khai tuyên bố gỡ bỏ tính năng phân tích khuôn mặt từ năm 2021 sau báo cáo kiểm toán của ORCAA.
+  - *Điều nguồn xác nhận (Bằng chứng):* EPIC đã gửi đơn khiếu nại chính thức lên FTC; HireVue đã công khai tuyên bố gỡ bỏ tính năng phân tích khuôn mặt từ đầu năm 2021 sau báo cáo kiểm toán của công ty ORCAA.
   - *Điều tôi suy luận (Nhận định):* Dù HireVue khẳng định thuật toán đánh giá đa chiều, việc gán ghép chuyển động cơ mặt với năng lực trí tuệ là thiếu cơ sở khoa học, gây tổn hại nặng nề đến người khuyết tật.
 
 #### Harm Map Worksheet
@@ -94,9 +94,9 @@
 - AI được dùng để làm gì: Tự động phân loại, lọc và đề xuất ứng viên đạt tiêu chuẩn từ hàng triệu hồ sơ xin việc của các khách hàng doanh nghiệp thuộc nhóm Fortune 500.
 - Vấn đề hoặc sự kiện đáng chú ý: Hệ thống bị cáo buộc tạo ra tác động sai lệch có tính hệ thống (disparate impact), tự động từ chối hồ sơ của các ứng viên là người da màu, người trên 40 tuổi và người có tiền sử khuyết tật dù họ đáp ứng đầy đủ yêu cầu chuyên môn.
 - Số liệu có nguồn:
-  - Nguyên đơn Derek Mobley (ứng viên da màu, trên 40 tuổi, mắc chứng lo âu/trầm cảm) đã nộp đơn ứng tuyển vào **hơn 100 vị trí** tại các công ty dùng Workday (như HP, AT&T, Comcast) và bị hệ thống tự động từ chối trong thời gian cực ngắn (thường vào ban đêm sau vài giờ nộp đơn).
-  - Workday phục vụ hơn **65 triệu người dùng** và hơn **50% doanh nghiệp thuộc danh sách Fortune 500**.
-  - Tháng 7/2024, Thẩm phán Liên bang Rita Lin đã ra **phán quyết bác bỏ yêu cầu hủy vụ kiện của Workday**, xác lập tiền lệ pháp lý: Nhà cung cấp phần mềm AI tuyển dụng có thể bị kiện như một "Đại lý tuyển dụng" (Employment Agency) theo Đạo luật Dân quyền Mỹ (Title VII, ADEA, ADA).
+  - **Hơn 100 vị trí ứng tuyển bị từ chối tự động:** Số hồ sơ công việc nộp qua hệ thống của Workday bị từ chối trong thời gian ngắn (thường sau vài giờ vào ban đêm) của nguyên đơn Derek Mobley (ứng viên da màu, trên 40 tuổi, mắc bệnh lý lo âu/trầm cảm) trong giai đoạn 2018–2023, theo Hồ sơ Tòa án Liên bang Quận Bắc California (2024).
+  - **Hơn 65 triệu người dùng & 50% doanh nghiệp Fortune 500:** Phạm vi quy mô sử dụng nền tảng Workday HCM trên toàn cầu, theo Bloomberg Law (2024).
+  - **01 phán quyết bác bỏ đề nghị bãi bỏ vụ kiện:** Thẩm phán Liên bang Rita Lin đã chính thức ký phán quyết vào ngày 12/07/2024 từ chối yêu cầu hủy vụ kiện của Workday, xác lập tiền lệ pháp lý quy trách nhiệm cho AI vendor, theo Tòa án Liên bang Mỹ (2024).
 - Nguồn:
   - Văn bản phán quyết tòa án: *Mobley v. Workday, Inc., Case No. 23-cv-00770-RFL (Order Denying Motion to Dismiss)* — Tòa án Liên bang Quận Bắc California — Ngày: 12/07/2024 — URL: https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv00770/408892/103/
   - Báo chí pháp lý: *"Workday Must Face Lawsuit Over AI Bias in Hiring, Judge Rules"* — Báo: Bloomberg Law — Ngày: 15/07/2024 — URL: https://news.bloomberglaw.com/daily-labor-report/workday-must-face-lawsuit-over-ai-bias-in-hiring-judge-rules
