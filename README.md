@@ -1,107 +1,120 @@
-# BÁO CÁO LAB DAY 21 — TRACK 1: AI ETHICS, AI SAFETY & RESPONSIBLE AI
+# Lab 21 — Phân tích rủi ro AI qua case study thực tế
 
-* **Học viên:** Thân Thị Kim Chi
-* **Mã số học viên (MSSV):** 2A202602797
-* **Tên Repository:** `DAY21_Track1_2A202602797_ThanThiKimChi`
-* **Ngành được chọn:** Tuyển dụng & Quản trị Nhân sự (HR Tech & Talent Acquisition)
-
----
-
-## PHẦN 1: INDUSTRY RISK SNAPSHOT
-
-| Tiêu chí | Đánh giá & Phân tích chi tiết |
-| :--- | :--- |
-| **Ngành được chọn** | **Tuyển dụng & Quản trị Nhân sự (HR Tech & Talent Acquisition)** |
-| **Tác hại chính (Primary Harm)** | **Bất bình đẳng và tước đoạt cơ hội việc làm/sinh kế có hệ thống.**<br>Khi hệ thống AI mắc lỗi thiên kiến hoặc phân loại sai, ứng viên bị tước bỏ cơ hội tiếp cận việc làm mà không hề hay biết; đồng thời doanh nghiệp mất đi nhân tài và củng cố thêm các định kiến phân biệt đối xử trong xã hội (giới tính, chủng tộc, độ tuổi, khuyết tật). |
-| **Mức độ High-stakes** | **RẤT CAO (High-Stakes Category theo EU AI Act).**<br>Việc làm quyết định trực tiếp đến thu nhập, an sinh xã hội, sự phát triển cá nhân và bình đẳng kinh tế. Một quyết định sa thải hoặc từ chối hồ sơ tự động ở quy mô lớn có thể hủy hoại lộ trình nghề nghiệp của hàng ngàn con người mà không có cơ chế khiếu nại minh bạch. |
-| **Dữ liệu nhạy cảm (Sensitive Data)** | 1. **Dữ liệu nhân thân & PII:** Họ tên, ngày sinh, địa chỉ, số điện thoại, tình trạng hôn nhân.<br>2. **Dữ liệu nhân khẩu học & thuộc tính được bảo vệ (Protected Attributes):** Giới tính, chủng tộc/sắc tộc, quốc tịch, tôn giáo, xu hướng tính dục.<br>3. **Dữ liệu sinh trắc học & phi ngôn ngữ:** Video phỏng vấn ghi nhận biểu cảm khuôn mặt (facial micro-expressions), cao độ giọng nói, ngữ điệu, cử chỉ mắt.<br>4. **Dữ liệu y tế/sức khỏe:** Tình trạng khuyết tật (khuyết tật vận động, thần kinh, giọng nói). |
-| **Nhu cầu Human-in-the-loop (HITL)** | **BẮT BUỘC Ở KHÂU QUYẾT ĐỊNH CUỐI CÙNG (Decision Stage).**<br>- AI chỉ được đóng vai trò là công cụ hỗ trợ gợi ý (Decision-support system), tuyệt đối không để AI tự động loại bỏ (Auto-rejection) mà không có sự kiểm tra của con người.<br>- Chuyên viên tuyển dụng (HR Recruiter) phải kiểm toán định kỳ danh sách ứng viên bị AI đánh giá thấp để phát hiện mẫu sai lệch (bias patterns).<br>- Phải có cơ chế giải trình (Explainability) và cổng khiếu nại dành cho ứng viên nếu nghi ngờ bị thuật toán đối xử bất công. |
+- Họ và tên: Thân Thị Kim Chi
+- MSSV / mã học viên: 2A202602797
+- Lớp: Track 1
+- Ngành đã chọn: Tuyển dụng & Quản trị Nhân sự (HR Tech & Talent Acquisition)
 
 ---
 
-## PHẦN 2: BRIEF CASE (3 CASE STUDY AI CÓ THẬT)
+### 1. Industry Risk Snapshot
 
-### 📌 Case Study 1: Amazon AI Recruitment Tool (2014 – 2018)
-* **Hệ thống AI:** Công cụ tự động sàng lọc và xếp hạng CV ứng viên bằng Machine Learning.
-* **Đơn vị phát triển/triển khai:** Amazon (Nhóm kỹ sư máy học tại văn phòng Edinburgh, Scotland).
-* **Mục đích sử dụng:** Tự động hóa quá trình đánh giá hàng trăm ngàn CV nộp vào Amazon, chấm điểm từ 1 đến 5 sao để tìm ra các lập trình viên và kỹ sư phần mềm xuất sắc nhất.
-* **Sự cố thực tế:** Thuật toán tự học trên tập dữ liệu hồ sơ tuyển dụng trong vòng 10 năm trước đó của ngành công nghệ (vốn do nam giới áp đảo). Kết quả là AI tự hình thành quy tắc phạt điểm và hạ bậc bất kỳ CV nào có chứa từ *"women's"* (ví dụ: *"women's chess club captain"*) và hạ thấp điểm của sinh viên tốt nghiệp từ hai trường đại học nữ sinh.
-* **Số liệu cụ thể:** Nhóm dự án phát hiện hệ thống phân biệt đối xử với ứng viên nữ ngay cả khi đã cố gắng loại bỏ biến số giới tính trực tiếp. Đến năm 2017, ban lãnh đạo Amazon nhận thấy không thể khắc phục triệt để tính thiên lệch của thuật toán và đã chính thức giải tán dự án vào đầu năm 2018 mà không đưa vào sản xuất đại trà.
-* **Nguồn kiểm chứng:** Điều tra độc quyền của hãng thông tấn **Reuters** bởi nhà báo Jeffrey Dastin: *"Amazon scraps secret AI recruiting tool that showed bias against women"* (Xuất bản ngày 10/10/2018).
-
----
-
-### 📌 Case Study 2: HireVue AI Facial & Speech Analysis Video Interview (2019 – 2021)
-* **Hệ thống AI:** Nền tảng phỏng vấn video tích hợp AI tự động chấm điểm độ phù hợp của ứng viên (Employability score) qua nhận diện khuôn mặt và xử lý ngôn ngữ tự nhiên.
-* **Đơn vị phát triển/triển khai:** HireVue (được hàng trăm tập đoàn toàn cầu như Hilton, Unilever, Goldman Sachs sử dụng).
-* **Mục đích sử dụng:** Cho phép ứng viên ghi hình câu trả lời video, sau đó AI phân tích biểu cảm vi mô (micro-expressions), chuyển động cơ mặt, ngữ điệu giọng nói và lựa chọn từ ngữ để xếp hạng ứng viên.
-* **Sự cố thực tế:** Hệ thống bị các nhà khoa học máy tính và tổ chức nhân quyền chỉ trích là "khoa học giả tưởng nguy hiểm" (pseudoscience). Thuật toán gây bất lợi nghiêm trọng cho những người có biểu cảm khuôn mặt khác biệt, người mắc chứng tự kỷ, người bị liệt mặt, hoặc người nói tiếng Anh không phải tiếng mẹ đẻ.
-* **Số liệu cụ thể:** Tháng 11/2019, Tổ chức Trung tâm Thông tin Quyền riêng tư Điện tử (**EPIC**) đã nộp đơn khiếu nại chính thức lên Ủy ban Thương mại Liên bang Mỹ (**FTC**), cáo buộc HireVue thực hiện hành vi thương mại gian lận và không công bằng. Sau cuộc kiểm toán thuật toán độc lập của công ty tư vấn ORCAA (do nhà toán học Cathy O'Neil dẫn dắt), HireVue đã buộc phải **tuyên bố loại bỏ hoàn toàn tính năng phân tích khuôn mặt (facial analysis)** vào đầu năm 2021.
-* **Nguồn kiểm chứng:** 
-  1. Đơn khiếu nại FTC của EPIC: *EPIC v. HireVue Complaint (FTC Matter No. 2020)*.
-  2. Báo cáo kiểm toán độc lập ORCAA / Tạp chí *Washington Post*: *"A popular algorithm used to screen job applicants was tested for bias. The results weren’t pretty"* (2021).
+| Nội dung | Đánh giá của tôi và lý do |
+| --- | --- |
+| Những tác hại chính có thể xảy ra | **Bất bình đẳng và tước đoạt cơ hội việc làm/sinh kế có hệ thống.**<br>Ứng viên bị tước mất cơ hội nghề nghiệp mà không được giải trình minh bạch; củng cố các định kiến xã hội đối với phụ nữ, người da màu, người lớn tuổi và người khuyết tật. Về phía doanh nghiệp, việc phân loại sai khiến họ bỏ lỡ nhân tài và đối mặt với rủi ro pháp lý/kiện tụng nghiêm trọng. |
+| Mức độ high-stakes | **Cao (High-Stakes Category theo Phân loại của EU AI Act).**<br>Việc làm và thu nhập quyết định trực tiếp tới sinh kế, an sinh xã hội và phẩm giá con người. Một quyết định tự động loại hồ sơ ở quy mô lớn có thể loại trừ vĩnh viễn một nhóm người khỏi thị trường lao động mà họ không có quyền khiếu nại. |
+| Dữ liệu nhạy cảm có thể được sử dụng | **Dữ liệu nhân thân & thuộc tính được bảo vệ (Protected Attributes):**<br>- Thông tin cá nhân (PII): Họ tên, địa chỉ, tuổi tác, giới tính, trường học.<br>- Dữ liệu sinh trắc học & phi ngôn ngữ: Video phỏng vấn ghi nhận biểu cảm cơ mặt (micro-expressions), cao độ giọng nói, ngữ điệu.<br>- Dữ liệu sức khỏe/khuyết tật: Lịch sử y tế, tình trạng khuyết tật thần kinh/vận động. *(Bài làm không sử dụng dữ liệu thật của cá nhân).* |
+| Nhu cầu human review | **Cao (Bắt buộc phải có Human-in-the-loop ở khâu quyết định cuối cùng).**<br>Chuyên viên tuyển dụng (HR Recruiter) phải kiểm tra danh sách ứng viên trước khi gửi thư từ chối; AI chỉ được đóng vai trò hỗ trợ gợi ý (decision-support). Cần kiểm toán định kỳ tỷ lệ ứng viên bị loại theo nhóm nhân khẩu học để phát hiện thiên kiến kịp thời. |
 
 ---
 
-### 📌 Case Study 3: Vụ kiện Phân biệt đối xử Thuật toán Workday — Mobley v. Workday, Inc. (2023 – 2024)
-* **Hệ thống AI:** Bộ công cụ sàng lọc và tuyển dụng ứng viên bằng AI tích hợp trên nền tảng đám mây Workday HCM.
-* **Đơn vị phát triển/triển khai:** Workday, Inc. (phục vụ hơn 60 triệu người dùng và đa số các doanh nghiệp Fortune 500).
-* **Mục đích sử dụng:** Tự động phân loại, lọc và đề xuất ứng viên đạt tiêu chuẩn từ hàng triệu hồ sơ xin việc của các khách hàng doanh nghiệp.
-* **Sự cố thực tế:** Thuật toán của Workday bị cáo buộc tạo ra tác động sai lệch có tính hệ thống (disparate impact), tự động loại trừ các ứng viên là người da màu, người trên 40 tuổi và người khuyết tật dù họ đáp ứng đầy đủ yêu cầu chuyên môn.
-* **Số liệu cụ thể:** Nguyên đơn Derek Mobley (một ứng viên da màu, trên 40 tuổi, mắc chứng lo âu/trầm cảm) đã nộp đơn ứng tuyển vào **hơn 100 vị trí** tại các công ty sử dụng phần mềm Workday (như HP, Comcast, AT&T) và bị hệ thống tự động gửi thư từ chối trong thời gian ngắn kỷ lục, thường là vào ban đêm chỉ sau vài giờ nộp đơn. Tháng 7/2024, Thẩm phán Tòa án Liên bang Rita Lin đã ra phán quyết bác bỏ nỗ lực hủy vụ kiện của Workday, xác lập tiền lệ pháp lý quan trọng: Nhà cung cấp phần mềm AI có thể bị kiện như một "Đại lý tuyển dụng" (Employment Agency) theo Đạo luật Dân quyền Mỹ Title VII, ADEA và ADA.
-* **Nguồn kiểm chứng:**
-  1. Hồ sơ Tòa án Liên bang Quận Bắc California: *Mobley v. Workday, Inc., Case No. 23-cv-00770-RFL (Order Denying Motion to Dismiss, July 2024)*.
-  2. Phân tích pháp lý từ *Bloomberg Law* & *Reuters Legal*: *"Workday must face AI hiring bias lawsuit, judge rules"* (15/07/2024).
+### 2. Case study 1 — Amazon AI Recruitment Tool (2014 – 2018)
+
+#### Brief Case
+- Tổ chức / sản phẩm AI: Amazon / Công cụ máy học tự động sàng lọc và xếp hạng hồ sơ ứng viên (Automated Applicant Screening Tool).
+- Thời gian, địa điểm / bối cảnh: Giai đoạn 2014 – 2017 tại Amazon (Mỹ và Anh); được Reuters phanh phui và chính thức giải tán vào năm 2018.
+- AI được dùng để làm gì: Tự động chấm điểm CV của ứng viên trên thang từ 1 đến 5 sao nhằm chọn ra top 5 ứng viên tiềm năng nhất cho các vị trí kỹ sư phần mềm.
+- Vấn đề hoặc sự kiện đáng chú ý: Thuật toán tự học từ dữ liệu tuyển dụng 10 năm trước của ngành công nghệ (vốn do nam giới áp đảo), từ đó tự hình thành quy tắc phạt điểm các CV có chứa từ *"women's"* (như *"women's chess club"*) và hạ điểm sinh viên tốt nghiệp các trường nữ sinh.
+- Số liệu có nguồn:
+  - Sử dụng dữ liệu huấn luyện gồm hồ sơ tuyển dụng nộp vào Amazon trong **10 năm** (2004–2014).
+  - Đội ngũ kỹ sư đã thử nghiệm khoảng **500 mô hình máy học** trên hàng ngàn vị trí công việc.
+  - Amazon đã chính thức **giải tán nhóm dự án vào đầu năm 2018** sau khi nhận thấy không thể loại bỏ triệt để thiên kiến giới tính trong thuật toán.
+- Nguồn: Bài báo điều tra độc quyền: *"Amazon scraps secret AI recruiting tool that showed bias against women"* — Tác giả: Jeffrey Dastin — Đơn vị: Reuters — Ngày công bố: 10/10/2018 — URL: https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G
+- Phân biệt bằng chứng và nhận định:
+  - *Điều nguồn xác nhận (Bằng chứng):* Amazon đã phát triển công cụ này từ năm 2014, mô hình tự động phạt điểm hồ sơ có từ khóa của nữ giới, và dự án đã bị hủy bỏ vì lo ngại phân biệt đối xử.
+  - *Điều tôi suy luận (Nhận định):* Dù Amazon tuyên bố công cụ chưa từng được dùng độc lập để ra quyết định tuyển dụng chính thức, việc thử nghiệm nội bộ có thể đã tạo ra sự thiên vị vô thức cho các chuyên viên nhân sự tiếp cận kết quả chấm điểm.
+
+#### Harm Map Worksheet
+| Trường | Phân tích của tôi |
+| --- | --- |
+| High-risk moment | Giai đoạn sàng lọc hồ sơ ban đầu (Pre-screening) — AI tự động chấm điểm và xếp hạng từ 1 đến 5 sao trước khi hồ sơ đến tay nhà tuyển dụng. |
+| Stakeholder bị ảnh hưởng | Ứng viên nữ nộp đơn vào vị trí kỹ sư phần mềm; đội ngũ tuyển dụng Amazon; uy tín thương hiệu của Amazon về đa dạng và hòa nhập (DEI). |
+| Failure mode | Historical Bias & Algorithmic Gender Discrimination (Thiên kiến lịch sử và phân biệt đối xử theo giới tính). |
+| Layer bắt đầu lỗi | **Model Layer & Data Layer** (Dữ liệu huấn luyện lịch sử mất cân đối nghiêm trọng; hàm mục tiêu tối ưu sao chép mẫu tuyển dụng quá khứ). |
+| Harm xảy ra là gì? | - *Đã xảy ra:* Lãng phí tài nguyên công nghệ; tổn hại danh tiếng doanh nghiệp khi sự việc bị phanh phui trước công chúng.<br>- *Nguy cơ được ngăn chặn:* Hàng ngàn ứng viên nữ có nguy cơ bị loại bỏ bất công ở vòng sơ tuyển nếu hệ thống được triển khai trên quy mô lớn. |
+| Harm lens | Representational Harm (Tác hại định kiến đại diện) & Allocative Harm (Tác hại phân bổ cơ hội kinh tế). |
+| Severity | **High** (Tác động trực tiếp đến bình đẳng giới và cơ hội việc làm tại tập đoàn công nghệ lớn nhất thế giới). |
+| Scale | **Medium to Large** (Hàng ngàn hồ sơ ứng tuyển kỹ thuật mỗi đợt; 500 mô hình được thử nghiệm; phạm vi toàn cầu của Amazon). |
+| Probability | **Certain** (Đã xảy ra trong môi trường thử nghiệm nội bộ của Amazon). |
+| Frequency | **High** (Xuất hiện liên tục mỗi khi CV của ứng viên nữ có chứa các từ khóa đặc thù giới tính đi qua bộ lọc). |
+| Vì sao? | Đánh giá dựa trên báo cáo điều tra độc quyền của Reuters với lời xác nhận của các cựu kỹ sư Amazon; nguyên nhân cốt lõi là máy học sao chép cơ học sự bất bình đẳng giới vốn có trong lịch sử ngành công nghệ. |
 
 ---
 
-## PHẦN 3: HARM MAP WORKSHEET
+### 3. Case study 2 — HireVue AI Facial & Speech Video Analysis (2019 – 2021)
 
-### 📋 Harm Map 1: Amazon AI Recruitment Tool
+#### Brief Case
+- Tổ chức / sản phẩm AI: HireVue / Nền tảng phỏng vấn video tích hợp AI chấm điểm năng lực ứng viên (Assessments AI).
+- Thời gian, địa điểm / bối cảnh: Giai đoạn 2014 – 2021 tại Mỹ và toàn cầu; phục vụ hơn 700 khách hàng doanh nghiệp lớn (như Unilever, Hilton, Goldman Sachs).
+- AI được dùng để làm gì: Phân tích biểu cảm cơ mặt (micro-expressions), cao độ giọng nói, ngữ điệu và từ vựng của ứng viên qua webcam khi trả lời câu hỏi tự động, từ đó xuất ra điểm số "khả năng làm việc" (employability score).
+- Vấn đề hoặc sự kiện đáng chú ý: Hệ thống bị giới khoa học và tổ chức nhân quyền chỉ trích là "ngụy khoa học" (pseudoscience). Thuật toán phân biệt đối xử với ứng viên có biểu cảm khuôn mặt khác biệt, người mắc chứng tự kỷ, người bị liệt mặt, hoặc người nói tiếng Anh không mang giọng chuẩn bản xứ.
+- Số liệu có nguồn:
+  - Hơn **1 triệu cuộc phỏng vấn AI** được thực hiện trên toàn cầu mỗi năm.
+  - Tháng 11/2019, Tổ chức EPIC đã nộp đơn khiếu nại chính thức dài **34 trang** lên FTC cáo buộc vi phạm Mục 5 Đạo luật FTC (hành vi thương mại gian lận và không công bằng).
+  - Đầu năm 2021, sau cuộc kiểm toán thuật toán độc lập của công ty tư vấn ORCAA, HireVue đã chính thức **loại bỏ hoàn toàn tính năng phân tích khuôn mặt (facial analysis)** khỏi sản phẩm.
+- Nguồn:
+  - Đơn khiếu nại pháp lý: *EPIC Complaint to the Federal Trade Commission in the Matter of HireVue, Inc.* — Đơn vị: Electronic Privacy Information Center (EPIC) — Ngày nộp: 06/11/2019 — URL: https://epic.org/documents/in-the-matter-of-hirevue-inc/
+  - Báo cáo kiểm toán: *"A popular algorithm used to screen job applicants was tested for bias. The results weren’t pretty"* — Tác giả: Drew Harwell — Báo: The Washington Post — Ngày: 25/02/2021 — URL: https://www.washingtonpost.com/technology/2021/02/25/hirevue-facial-analysis-screening/
+- Phân biệt bằng chứng và nhận định:
+  - *Điều nguồn xác nhận (Bằng chứng):* EPIC đã gửi đơn khiếu nại chính thức lên FTC; HireVue đã công khai tuyên bố gỡ bỏ tính năng phân tích khuôn mặt từ năm 2021 sau báo cáo kiểm toán của ORCAA.
+  - *Điều tôi suy luận (Nhận định):* Dù HireVue khẳng định thuật toán đánh giá đa chiều, việc gán ghép chuyển động cơ mặt với năng lực trí tuệ là thiếu cơ sở khoa học, gây tổn hại nặng nề đến người khuyết tật.
 
-| Trường phân tích | Nội dung chi tiết |
-| :--- | :--- |
-| **Tên Case Study** | Amazon AI Recruiting Tool Bias |
-| **Failure Layer** | **Model Layer & Data Layer** (Dữ liệu lịch sử bị thiên lệch + Hàm mục tiêu tối ưu hóa sai lệch) |
-| **Failure Mode** | **Historical Bias & Algorithmic Discrimination** (Thiên kiến lịch sử dẫn đến phân biệt giới tính) |
-| **Root Cause (Nguyên nhân cốt lõi)** | Mô hình được huấn luyện trên 10 năm CV nộp vào Amazon - thời kỳ ngành công nghệ hoàn toàn do nam giới thống trị. Thuật toán học theo mẫu này và coi "yếu tố nam giới" là tiêu chí đại diện cho sự thành công của một kỹ sư. |
-| **Sự kiện thực tế có nguồn (Fact)** | - Thuật toán tự động hạ điểm các CV có cụm từ liên quan đến nữ giới như *"women's rugby"*, *"women's technology club"*.<br>- Amazon phải từ bỏ hoàn toàn dự án vào năm 2017/2018 sau khi xác nhận không thể loại bỏ triệt để bias *(Nguồn: Reuters, 2018)*. |
-| **Tác hại giả định/tiềm ẩn (Assumption)** | Nếu hệ thống này được triển khai chính thức trên quy mô toàn cầu của Amazon, hàng chục ngàn kỹ sư nữ tài năng sẽ bị loại khỏi vòng sơ tuyển, triệt tiêu nỗ lực đa dạng hóa lực lượng lao động (DEI) và tạo ra rào cản bất bình đẳng giới sâu sắc trong ngành công nghệ. |
-| **Human-in-the-loop & Rào chắn khắc phục** | - **Data Pre-processing:** Cân bằng lại tập dữ liệu huấn luyện, loại bỏ các biến số gián tiếp (proxy variables) liên quan đến giới tính.<br>- **Pre-screening Human Review:** Không để AI tự động đánh rớt hồ sơ; con người phải đối soát tỷ lệ giới tính ở danh sách trúng tuyển sơ bộ.<br>- **Algorithmic Auditing:** Kiểm toán định kỳ bằng phương pháp Disparate Impact Ratio (quy tắc 4/5). |
-
----
-
-### 📋 Harm Map 2: HireVue Facial Analysis
-
-| Trường phân tích | Nội dung chi tiết |
-| :--- | :--- |
-| **Tên Case Study** | HireVue AI Facial & Speech Video Analysis |
-| **Failure Layer** | **Grounding Layer & UX/Product Design Layer** (Khoa học nền tảng không có cơ sở xác thực - Pseudoscience) |
-| **Failure Mode** | **Lack of Grounding / Unfair Discrimination Against Disabilities & Minorities** |
-| **Root Cause (Nguyên nhân cốt lõi)** | Giả định sai lầm rằng biểu cảm cơ mặt và âm điệu giọng nói thể hiện năng lực làm việc hoặc sự tận tụy của ứng viên. Dữ liệu chuẩn mực (benchmark) được xây dựng trên nhóm người bình thường, không tính đến đặc thù của người khuyết tật và các nền văn hóa phi phương Tây. |
-| **Sự kiện thực tế có nguồn (Fact)** | - Tổ chức EPIC đệ đơn khiếu nại chính thức lên FTC vào năm 2019 vì vi phạm quyền người tiêu dùng.<br>- Báo cáo kiểm toán của ORCAA chỉ ra tính năng này tiềm ẩn rủi ro thiên kiến lớn, buộc HireVue phải xóa bỏ tính năng phân tích khuôn mặt vào đầu năm 2021 *(Nguồn: FTC, ORCAA, Washington Post)*. |
-| **Tác hại giả định/tiềm ẩn (Assumption)** | Ứng viên mắc bệnh lý thần kinh, tự kỷ, biến dạng cơ mặt hoặc người hướng nội có thể vĩnh viễn bị đánh trượt trong các cuộc phỏng vấn tuyển dụng tự động dù họ có chuyên môn kỹ thuật xuất sắc. |
-| **Human-in-the-loop & Rào chắn khắc phục** | - **Cấm sử dụng sinh trắc học cảm xúc (Emotion AI Ban):** Tuân thủ các quy định quốc tế (như EU AI Act cấm sử dụng AI nhận diện cảm xúc tại nơi làm việc).<br>- **Human Evaluation:** Video phỏng vấn chỉ nên được lưu lại để người phỏng vấn thật xem và đánh giá nội dung câu trả lời.<br>- **Quyền lựa chọn hình thức thay thế:** Cho phép ứng viên khuyết tật lựa chọn hình thức phỏng vấn truyền thống. |
-
----
-
-### 📋 Harm Map 3: Workday AI Screening Lawsuit (Mobley v. Workday)
-
-| Trường phân tích | Nội dung chi tiết |
-| :--- | :--- |
-| **Tên Case Study** | Workday AI Recruitment Disparate Impact Lawsuit |
-| **Failure Layer** | **Model Layer & Safety/Governance Layer** (Thiếu rào chắn kiểm toán độc lập và cơ chế giám sát tuân thủ luật lao động) |
-| **Failure Mode** | **Systemic Disparate Impact & Age/Race/Disability Discrimination** |
-| **Root Cause (Nguyên nhân cốt lõi)** | Thuật toán tối ưu hóa theo các chỉ số thành công trong quá khứ của các tập đoàn khách hàng, vô tình sử dụng các đặc trưng gián tiếp (như năm tốt nghiệp đại học để suy ra tuổi tác, từ vựng hoặc khoảng trống trong CV để suy ra tình trạng khuyết tật). |
-| **Sự kiện thực tế có nguồn (Fact)** | - Nguyên đơn nộp hồ sơ vào hơn 100 vị trí và bị loại tự động hàng loạt trong thời gian ngắn.<br>- Tòa án Liên bang Quận Bắc California bác bỏ đề nghị bãi bỏ vụ kiện của Workday vào tháng 7/2024, công nhận trách nhiệm pháp lý của nhà cung cấp phần mềm tuyển dụng *(Nguồn: US District Court Northern District of California, 2024)*. |
-| **Tác hại giả định/tiềm ẩn (Assumption)** | Hàng triệu người lao động lớn tuổi hoặc người thuộc nhóm yếu thế bị "vô hình hóa" trên thị trường lao động, tạo ra một thế hệ lao động bị đào thải phi lý bởi các thuật toán quản trị nhân sự đám mây. |
-| **Human-in-the-loop & Rào chắn khắc phục** | - **Bắt buộc Human-Signoff:** Mọi quyết định từ chối hồ sơ phải có chữ ký/phê duyệt của chuyên viên tuyển dụng người thật.<br>- **Minh bạch hóa thuật toán (Algorithmic Transparency):** Cung cấp lý do cụ thể vì sao hồ sơ không phù hợp (ví dụ: thiếu chứng chỉ chuyên môn cụ thể nào) thay vì một thông báo từ chối chung chung.<br>- **Third-party Bias Audit:** Kiểm toán định kỳ hàng năm bởi bên thứ ba độc lập theo tiêu chuẩn Luật NYC Local Law 144 (về công cụ tuyển dụng tự động). |
+#### Harm Map Worksheet
+| Trường | Phân tích của tôi |
+| --- | --- |
+| High-risk moment | Giai đoạn phỏng vấn video sơ loại bất đồng bộ (Asynchronous Video Interview) — AI chấm điểm khuôn mặt và giọng nói để quyết định ứng viên nào được vào vòng tiếp theo. |
+| Stakeholder bị ảnh hưởng | Ứng viên xin việc (đặc biệt là người khuyết tật cơ mặt, người tự kỷ, người thiểu số nói tiếng Anh không chuẩn giọng bản xứ); các doanh nghiệp khách hàng của HireVue. |
+| Failure mode | Lack of Grounding & Discrimination Against Disabilities / Minorities (Thiếu cơ sở khoa học xác thực và phân biệt đối xử với người khuyết tật/thiểu số). |
+| Layer bắt đầu lỗi | **Grounding Layer & UX/Product Design Layer** (Khoa học nền tảng sai lầm khi coi biểu cảm khuôn mặt phản ánh năng lực chuyên môn; thiết kế tương tác thiếu khả năng tiếp cận). |
+| Harm xảy ra là gì? | - *Đã xảy ra:* Hàng ngàn ứng viên bị đánh giá thấp một cách bất công mà không rõ lý do; gây căng thẳng tâm lý tột độ cho người tìm việc; khiếu nại pháp lý lên FTC.<br>- *Nguy cơ:* Bình thường hóa việc sử dụng "công nghệ nhận diện cảm xúc" vô căn cứ tại nơi làm việc. |
+| Harm lens | Psychological Harm (Tổn thương tâm lý) & Allocative Harm (Tác hại phân bổ cơ hội) & Accessibility Discrimination. |
+| Severity | **High** (Xâm phạm dữ liệu sinh trắc học cá nhân và tước đoạt cơ hội của nhóm người yếu thế/khuyết tật). |
+| Scale | **Large** (Hơn 1 triệu cuộc phỏng vấn mỗi năm tại hàng trăm tập đoàn đa quốc gia). |
+| Probability | **Certain** (Đã xảy ra và dẫn đến hành động pháp lý của EPIC cùng quyết định loại bỏ tính năng từ phía HireVue). |
+| Frequency | **Continuous** (Diễn ra liên tục trên mọi phiên phỏng vấn sử dụng tính năng phân tích nét mặt trước năm 2021). |
+| Vì sao? | Đánh giá dựa trên văn bản khiếu nại chính thức của EPIC gửi FTC và cuộc kiểm toán độc lập của chuyên gia toán học Cathy O'Neil (ORCAA) được Washington Post đưa tin. |
 
 ---
 
-## PHẦN 4: TỔNG KẾT BÀI HỌC VỀ RESPONSIBLE AI TRONG HR TECH
+### 4. Case study 3 — Workday AI Screening Discrimination Lawsuit (2023 – 2024)
 
-1. **AI không bao giờ trung lập nếu dữ liệu lịch sử mang định kiến:** Máy học không tạo ra sự công bằng một cách tự nhiên; nó sao chép và khuếch đại những thiên kiến có sẵn trong xã hội với tốc độ và quy mô công nghiệp.
-2. **Nguyên tắc High-Risk AI System:** Ngành tuyển dụng tác động trực tiếp đến quyền con người và sinh kế, do đó bắt buộc phải áp dụng tiêu chuẩn kiểm toán thuật toán nghiêm ngặt nhất (Fairness Metrics, Explainability, Red-teaming).
-3. **Trách nhiệm pháp lý không thể ủy thác cho thuật toán:** Phán quyết vụ *Mobley v. Workday* cho thấy cả doanh nghiệp sử dụng và nhà phát triển nền tảng AI đều phải chịu trách nhiệm trước pháp luật nếu hệ thống tạo ra sự phân biệt đối xử.
-4. **Human-in-the-loop là yêu cầu đạo đức tối thượng:** AI chỉ nên đóng vai trò là "trợ lý tóm tắt" và "hỗ trợ tìm kiếm", còn quyết định tuyển chọn và trao cơ hội phải thuộc về sự thấu cảm và trách nhiệm của con người.
+#### Brief Case
+- Tổ chức / sản phẩm AI: Workday, Inc. / Bộ công cụ AI sàng lọc và tuyển dụng ứng viên trên nền tảng đám mây Workday Human Capital Management (HCM).
+- Thời gian, địa điểm / bối cảnh: Giai đoạn 2023 – 2024 tại Tòa án Liên bang Quận Bắc California (Mỹ). Vụ kiện tập thể tiêu biểu về phân biệt đối xử thuật toán.
+- AI được dùng để làm gì: Tự động phân loại, lọc và đề xuất ứng viên đạt tiêu chuẩn từ hàng triệu hồ sơ xin việc của các khách hàng doanh nghiệp thuộc nhóm Fortune 500.
+- Vấn đề hoặc sự kiện đáng chú ý: Hệ thống bị cáo buộc tạo ra tác động sai lệch có tính hệ thống (disparate impact), tự động từ chối hồ sơ của các ứng viên là người da màu, người trên 40 tuổi và người có tiền sử khuyết tật dù họ đáp ứng đầy đủ yêu cầu chuyên môn.
+- Số liệu có nguồn:
+  - Nguyên đơn Derek Mobley (ứng viên da màu, trên 40 tuổi, mắc chứng lo âu/trầm cảm) đã nộp đơn ứng tuyển vào **hơn 100 vị trí** tại các công ty dùng Workday (như HP, AT&T, Comcast) và bị hệ thống tự động từ chối trong thời gian cực ngắn (thường vào ban đêm sau vài giờ nộp đơn).
+  - Workday phục vụ hơn **65 triệu người dùng** và hơn **50% doanh nghiệp thuộc danh sách Fortune 500**.
+  - Tháng 7/2024, Thẩm phán Liên bang Rita Lin đã ra **phán quyết bác bỏ yêu cầu hủy vụ kiện của Workday**, xác lập tiền lệ pháp lý: Nhà cung cấp phần mềm AI tuyển dụng có thể bị kiện như một "Đại lý tuyển dụng" (Employment Agency) theo Đạo luật Dân quyền Mỹ (Title VII, ADEA, ADA).
+- Nguồn:
+  - Văn bản phán quyết tòa án: *Mobley v. Workday, Inc., Case No. 23-cv-00770-RFL (Order Denying Motion to Dismiss)* — Tòa án Liên bang Quận Bắc California — Ngày: 12/07/2024 — URL: https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv00770/408892/103/
+  - Báo chí pháp lý: *"Workday Must Face Lawsuit Over AI Bias in Hiring, Judge Rules"* — Báo: Bloomberg Law — Ngày: 15/07/2024 — URL: https://news.bloomberglaw.com/daily-labor-report/workday-must-face-lawsuit-over-ai-bias-in-hiring-judge-rules
+- Phân biệt bằng chứng và nhận định:
+  - *Điều nguồn xác nhận (Bằng chứng):* Đơn kiện tập thể đã được Tòa án Liên bang thụ lý và Thẩm phán bác bỏ yêu cầu đình chỉ của Workday, xác lập cơ sở pháp lý về trách nhiệm của bên phát triển AI.
+  - *Điều tôi suy luận (Nhận định):* Dù Workday phủ nhận hành vi sai trái và vụ kiện đang trong giai đoạn cung cấp chứng cứ (discovery), tần suất từ chối tự động hàng loạt cho thấy khả năng cao mô hình sử dụng các biến số gián tiếp (như năm tốt nghiệp đại học) để suy luận độ tuổi của ứng viên.
+
+#### Harm Map Worksheet
+| Trường | Phân tích của tôi |
+| --- | --- |
+| High-risk moment | Giai đoạn tự động lọc và loại hồ sơ (Automated Rejection) ở quy mô hàng loạt mà không có sự kiểm tra thực tế của nhân sự con người. |
+| Stakeholder bị ảnh hưởng | Hàng triệu người tìm việc là người da màu, lao động lớn tuổi (trên 40 tuổi), người khuyết tật; các tập đoàn sử dụng Workday; uy tín của Workday. |
+| Failure mode | Systemic Disparate Impact & Age/Race/Disability Discrimination (Tác động sai lệch hệ thống và phân biệt đối xử theo tuổi tác/chủng tộc/khuyết tật). |
+| Layer bắt đầu lỗi | **Model Layer & Safety/Governance Layer** (Thiếu rào chắn kiểm toán thiên kiến độc lập và thiếu cơ chế bảo đảm tuân thủ luật chống phân biệt đối xử). |
+| Harm xảy ra là gì? | - *Đã xảy ra:* Ứng viên bị tước quyền tiếp cận việc làm hàng loạt; rủi ro pháp lý và chi phí kiện tụng tập thể khổng lồ cho Workday; tiền lệ pháp lý mở rộng trách nhiệm của AI vendor.<br>- *Nguy cơ:* Đào thải một thế hệ lao động lớn tuổi và người yếu thế ra khỏi thị trường việc làm hiện đại. |
+| Harm lens | Economic/Allocative Harm (Tác hại phân bổ cơ hội kinh tế) & Legal Harm & Systematic Social Exclusion. |
+| Severity | **Critical** (Ảnh hưởng ở quy mô hàng chục triệu người lao động và hàng trăm tập đoàn lớn nhất thế giới). |
+| Scale | **Very Large (Doanh nghiệp toàn cầu)** (Hơn 65 triệu người dùng và hơn 50% doanh nghiệp Fortune 500 chịu ảnh hưởng từ nền tảng Workday). |
+| Probability | **High** (Căn cứ vào quyết định thụ lý của Tòa án Liên bang xác nhận các cáo buộc ban đầu có đầy đủ cơ sở pháp lý). |
+| Frequency | **Continuous** (Diễn ra hàng ngày trên mọi quy trình tuyển dụng tự động của các công ty khách hàng Workday). |
+| Vì sao? | Đánh giá dựa trên phán quyết chính thức của Thẩm phán Liên bang Rita Lin và hồ sơ tòa án công khai; tính chất tập trung hóa của các nền tảng đám mây khiến rủi ro phân biệt đối xử nhân rộng theo cấp số nhân. |
