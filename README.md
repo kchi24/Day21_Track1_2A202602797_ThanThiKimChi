@@ -96,7 +96,7 @@
 - Số liệu có nguồn:
   - **Hơn 100 vị trí ứng tuyển bị từ chối tự động:** Số hồ sơ công việc nộp qua hệ thống của Workday bị từ chối trong thời gian ngắn (thường sau vài giờ vào ban đêm) của nguyên đơn Derek Mobley (ứng viên da màu, trên 40 tuổi, mắc bệnh lý lo âu/trầm cảm) trong giai đoạn 2018–2023, theo Hồ sơ Tòa án Liên bang Quận Bắc California (2024).
   - **Hơn 65 triệu người dùng & 50% doanh nghiệp Fortune 500:** Phạm vi quy mô sử dụng nền tảng Workday HCM trên toàn cầu, theo Bloomberg Law (2024).
-  - **01 phán quyết bác bỏ đề nghị bãi bỏ vụ kiện:** Thẩm phán Liên bang Rita Lin đã chính thức ký phán quyết vào ngày 12/07/2024 từ chối yêu cầu hủy vụ kiện của Workday, xác lập tiền lệ pháp lý quy trách nhiệm cho AI vendor, theo Tòa án Liên bang Mỹ (2024).
+  - **01 phán quyết bác bỏ đề nghị bãi bỏ vụ kiện:** Thẩm phán Liên bang Rita Lin đã chính thức ký phán quyết vào ngày 12/07/2024 từ chối yêu cầu hủy vụ kiện của Workday, chấp thuận lập luận rằng nhà cung cấp AI có thể bị quy trách nhiệm như một bên đại diện ("agent") của người sử dụng lao động theo các đạo luật chống phân biệt đối xử liên bang (Title VII, ADA, ADEA), theo Tòa án Liên bang Mỹ (2024).
 - Nguồn:
   - Văn bản phán quyết tòa án: *Mobley v. Workday, Inc., Case No. 23-cv-00770-RFL (Order Denying Motion to Dismiss)* — Tòa án Liên bang Quận Bắc California — Ngày: 12/07/2024 — URL: https://law.justia.com/cases/federal/district-courts/california/candce/3:2023cv00770/408892/103/
   - Báo chí pháp lý: *"Workday Must Face Lawsuit Over AI Bias in Hiring, Judge Rules"* — Báo: Bloomberg Law — Ngày: 15/07/2024 — URL: https://news.bloomberglaw.com/daily-labor-report/workday-must-face-lawsuit-over-ai-bias-in-hiring-judge-rules
